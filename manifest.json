@@ -1,0 +1,26 @@
+{
+  "name": "Calm Down",
+  "short_name": "Calm Down",
+  "lang": "en",
+  "description": "A personal stress-relief guide to help you calm down step by step.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1C2340",
+  "theme_color": "#1C2340",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
