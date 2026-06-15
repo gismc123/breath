@@ -1,8 +1,10 @@
 {
-  "name": "BREATH",
-  "short_name": "BREATH",
+  "name": "BREATHE",
+  "short_name": "BREATHE",
+  "id": "/",
   "lang": "en",
-  "description": "A simple breathing app to help you find calm.",
+  "description": "Guided box breathing for stress, anxiety, and overwhelm. No account, no tracking, works offline.",
+  "categories": ["health", "lifestyle"],
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

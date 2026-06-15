@@ -1,4 +1,4 @@
-# BREATH
+# BREATHE
 
 A minimal, mobile-first Progressive Web App for box breathing. No account. No login. No app store. Open the link and breathe.
 
@@ -6,7 +6,7 @@ A minimal, mobile-first Progressive Web App for box breathing. No account. No lo
 
 ## What It Does
 
-BREATH guides you through a three-step flow whenever you need to reset:
+BREATHE guides you through a three-step flow whenever you need to reset:
 
 **1. Feeling Check-In**
 Select how you're feeling right now — Stressed, Anxious, Sad, Overwhelmed, Tired, or Angry. Nothing is stored or transmitted.
@@ -95,14 +95,14 @@ The container exposes port `907` on the host. Point your reverse proxy at that p
 ### Nginx Proxy Manager (GUI)
 
 1. **Proxy Hosts → Add Proxy Host**
-2. **Domain:** `breath.yourdomain.com`
+2. **Domain:** `breathe.yourdomain.com`
 3. **Scheme:** `http` · **Forward Hostname:** `localhost` · **Forward Port:** `907`
 4. Enable **Block Common Exploits** and request an SSL certificate under the **SSL** tab
 
 ### Caddy
 
 ```
-breath.yourdomain.com {
+breathe.yourdomain.com {
     reverse_proxy localhost:907
 }
 ```
@@ -111,16 +111,16 @@ breath.yourdomain.com {
 
 ```yaml
 services:
-  breath-app:
+  breathe-app:
     build: .
-    container_name: breath-app
+    container_name: breathe-app
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.breath.rule=Host(`breath.yourdomain.com`)"
-      - "traefik.http.routers.breath.entrypoints=websecure"
-      - "traefik.http.routers.breath.tls.certresolver=letsencrypt"
-      - "traefik.http.services.breath.loadbalancer.server.port=80"
+      - "traefik.http.routers.breathe.rule=Host(`breathe.yourdomain.com`)"
+      - "traefik.http.routers.breathe.entrypoints=websecure"
+      - "traefik.http.routers.breathe.tls.certresolver=letsencrypt"
+      - "traefik.http.services.breathe.loadbalancer.server.port=80"
 ```
 
 Remove the `ports` block — Traefik handles routing through the Docker network.
@@ -150,7 +150,7 @@ Create a `.env` from `.env.example` and fill in your Cloudflare credentials if y
 - **iOS (Safari):** Tap the Share icon → **Add to Home Screen**.
 - Tap **+ Home Screen** in the app header for step-by-step instructions.
 
-Once installed, BREATH launches in standalone mode (no browser chrome) and works fully offline.
+Once installed, BREATHE launches in standalone mode (no browser chrome) and works fully offline.
 
 ---
 
@@ -164,11 +164,13 @@ breath/
 ├── i18n.js             # Internationalization — loads locale JSON, exposes t()
 ├── manifest.json       # PWA manifest (icons, display mode, theme color)
 ├── sw.js               # Service worker — caches assets for offline use
-├── Dockerfile          # nginx:alpine image, stamps BUILD_DATE build arg
+├── robots.txt          # Search engine crawl rules + sitemap pointer
+├── sitemap.xml         # XML sitemap (APP_URL substituted at build time)
+├── Dockerfile          # nginx:alpine image, stamps BUILD_DATE and APP_URL
 ├── docker-compose.yml  # Maps container port 80 to host port 907
 ├── nginx.conf          # Cache-control headers
 ├── deploy.sh           # git pull → docker build/up → optional Cloudflare purge
-├── .env.example        # Template for CF_API_TOKEN and CF_ZONE_ID
+├── .env.example        # Template for CF_API_TOKEN, CF_ZONE_ID, and APP_URL
 ├── locales/
 │   ├── en.json         # English strings
 │   └── es.json         # Spanish strings
@@ -182,4 +184,4 @@ breath/
 
 ## Legal
 
-BREATH is a personal wellness tool. It is not a medical service, mental health treatment, or clinical intervention. Nothing in this app constitutes medical advice, diagnosis, or treatment. If you are in crisis, call or text **988** (Suicide & Crisis Lifeline).
+BREATHE is a personal wellness tool. It is not a medical service, mental health treatment, or clinical intervention. Nothing in this app constitutes medical advice, diagnosis, or treatment. If you are in crisis, call or text **988** (Suicide & Crisis Lifeline).

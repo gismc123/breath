@@ -1,10 +1,11 @@
 services:
-  breath-app:
+  breathe-app:
     build:
       context: .
       args:
         BUILD_DATE: ${BUILD_DATE:-latest}
-    container_name: breath-app
+        APP_URL: ${APP_URL:-https://yourdomain.com}
+    container_name: breathe-app
     ports:
       - "907:80"
     restart: unless-stopped

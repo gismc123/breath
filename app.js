@@ -1,5 +1,5 @@
 /* ============================================================
-   BREATH — MAIN LOGIC
+   BREATHE — MAIN LOGIC
    ============================================================ */
 
 const FEELINGS = [
@@ -55,7 +55,7 @@ function hideInstallModal() {
   const modal = $('install-modal');
   modal.classList.add('hidden');
   modal.setAttribute('aria-hidden', 'true');
-  localStorage.setItem('breath-install-seen', '1');
+  localStorage.setItem('breathe-install-seen', '1');
 }
 
 function initInstallModal() {
@@ -68,7 +68,7 @@ function initInstallModal() {
     return;
   }
 
-  if (!localStorage.getItem('breath-install-seen')) {
+  if (!localStorage.getItem('breathe-install-seen')) {
     showInstallModal();
   }
 
@@ -101,7 +101,7 @@ function initLegalModals() {
     const meta = document.querySelector('meta[name="app-version"]');
     const version = (meta && meta.content && meta.content !== '__APP_VERSION__')
       ? meta.content
-      : 'breath-v1.0-dev';
+      : 'breathe-v1.0-dev';
     $('build-version-string').textContent = version;
   });
 }
@@ -115,11 +115,11 @@ function applyTheme(name) {
   document.querySelectorAll('.theme-swatch').forEach(s => {
     s.classList.toggle('theme-swatch--active', s.dataset.theme === name);
   });
-  localStorage.setItem('breath-theme', name);
+  localStorage.setItem('breathe-theme', name);
 }
 
 function initTheme() {
-  const saved = localStorage.getItem('breath-theme') || localStorage.getItem('calm-theme') || 'midnight';
+  const saved = localStorage.getItem('breathe-theme') || localStorage.getItem('breath-theme') || localStorage.getItem('calm-theme') || 'midnight';
   applyTheme(saved);
   document.querySelectorAll('.theme-swatch').forEach(swatch => {
     swatch.addEventListener('click', () => applyTheme(swatch.dataset.theme));
@@ -164,6 +164,7 @@ function renderFeelings() {
     btn.dataset.feelingId = feeling.id;
     btn.setAttribute('role', 'radio');
     btn.setAttribute('aria-checked', 'false');
+    btn.setAttribute('data-i18n', feeling.label);
     btn.textContent = t(feeling.label);
     btn.addEventListener('click', () => selectFeeling(feeling.id));
     grid.appendChild(btn);
@@ -188,7 +189,9 @@ function selectFeeling(id) {
 
 function showAffirmation() {
   const key = AFFIRMATIONS[state.currentFeeling] || 'affirmation.default';
-  $('affirmation-text').textContent = t(key);
+  const el = $('affirmation-text');
+  el.setAttribute('data-i18n', key);
+  el.textContent = t(key);
   showScreen('screen-affirmation');
 }
 
@@ -216,8 +219,8 @@ function renderBoxBreathing(container) {
 
   container.innerHTML = `
     <div class="tool-header">
-      <h2 class="tool-title">${t('box-breathing.title')}</h2>
-      <p class="tool-subtitle">${t('box-breathing.subtitle')}</p>
+      <h2 class="tool-title" data-i18n="box-breathing.title">${t('box-breathing.title')}</h2>
+      <p class="tool-subtitle" data-i18n="box-breathing.subtitle">${t('box-breathing.subtitle')}</p>
     </div>
 
     <div class="breath-stage">
@@ -233,15 +236,15 @@ function renderBoxBreathing(container) {
 
     <div id="breath-complete" class="breath-complete hidden">
       <p class="breath-complete-msg"></p>
-      <button class="btn--keep-going" id="btn-keep-going">${t('box-breathing.keep-going')}</button>
+      <button class="btn--keep-going" id="btn-keep-going" data-i18n="box-breathing.keep-going">${t('box-breathing.keep-going')}</button>
     </div>
 
     <label class="breath-mode-toggle" id="mode-toggle-label" style="margin-top:24px">
       <div class="toggle-switch" id="exhale-toggle"></div>
-      <span class="toggle-label">${t('box-breathing.extended-exhale')}</span>
+      <span class="toggle-label" data-i18n-html="box-breathing.extended-exhale">${t('box-breathing.extended-exhale')}</span>
     </label>
 
-    <div class="breath-coaching">
+    <div class="breath-coaching" data-i18n="box-breathing.coaching">
       ${t('box-breathing.coaching')}
     </div>
   `;
@@ -330,6 +333,26 @@ function renderBoxBreathing(container) {
     }, 1000);
     addTimer(tickId);
   });
+
+  function onLangChange() {
+    if (!document.contains(container)) {
+      document.removeEventListener('breathe:langchange', onLangChange);
+      return;
+    }
+    currentPhases = buildPhases(extendedExhale);
+    phaseEl.textContent = sessionRunning
+      ? currentPhases[phaseIndex].name
+      : t('box-breathing.ready');
+    roundEl.textContent = t('box-breathing.round')
+      .replace('{n}', roundsCompleted + 1)
+      .replace('{total}', totalRounds);
+    if (!completeEl.classList.contains('hidden')) {
+      const s = totalRounds !== 1 ? 's' : '';
+      completeEl.querySelector('.breath-complete-msg').textContent =
+        t('box-breathing.complete.msg').replace('{n}', totalRounds).replace('{s}', s);
+    }
+  }
+  document.addEventListener('breathe:langchange', onLangChange);
 }
 
 // ============================================================

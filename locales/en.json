@@ -1,5 +1,5 @@
 {
-  "header.wordmark": "BREATH",
+  "header.wordmark": "BREATHE",
   "header.install-btn": "+ Home Screen",
   "header.install-btn.aria": "How to add to home screen",
   "header.theme-picker.aria": "Choose color theme",
@@ -59,7 +59,7 @@
   "completion.end":    "I'm done for now",
 
   "install.modal.title":         "Add to Home Screen",
-  "install.modal.subtitle":      "BREATH works like a native app when installed on your phone. No app store needed.",
+  "install.modal.subtitle":      "BREATHE works like a native app when installed on your phone. No app store needed.",
   "install.modal.privacy":       "<strong>Your privacy is fully protected.</strong> Nothing you share is ever saved, recorded, or transmitted.",
   "install.modal.iphone.title":  "iPhone / iPad (Safari)",
   "install.modal.iphone.step1":  "Open this page in <strong>Safari</strong> (not Chrome)",
@@ -76,19 +76,19 @@
   "modal.ok":         "Got it",
 
   "terms.modal.title":    "Terms of Use",
-  "terms.modal.subtitle": "Please read these terms before using BREATH.",
+  "terms.modal.subtitle": "Please read these terms before using BREATHE.",
   "terms.h1": "Not a Medical Service",
-  "terms.b1": "BREATH is a personal wellness tool for breathing and stress management. It is <strong>not</strong> a medical service, mental health treatment, or clinical intervention. Nothing in this app constitutes medical advice, diagnosis, or treatment.",
+  "terms.b1": "BREATHE is a personal wellness tool for breathing and stress management. It is <strong>not</strong> a medical service, mental health treatment, or clinical intervention. Nothing in this app constitutes medical advice, diagnosis, or treatment.",
   "terms.h2": "Not a Substitute for Professional Care",
   "terms.b2": "If you are experiencing a mental health crisis, please contact a qualified professional or call/text <strong>988</strong> (Suicide &amp; Crisis Lifeline). This app is not a replacement for therapy, counseling, or any other professional care.",
   "terms.h3": "No Warranty",
   "terms.b3": "This app is provided \"as is\" without warranty of any kind. We make no guarantees about outcomes, availability, or fitness for any particular purpose.",
 
   "privacy.modal.title":    "Privacy Policy",
-  "privacy.modal.subtitle": "Your privacy is a core principle of BREATH — not an afterthought.",
+  "privacy.modal.subtitle": "Your privacy is a core principle of BREATHE — not an afterthought.",
   "privacy.notice": "<strong>We collect absolutely nothing.</strong> No account, no login, no tracking.",
   "privacy.h1": "No Data Collection",
-  "privacy.b1": "BREATH does not collect, store, or transmit any personal information. Everything stays on your device.",
+  "privacy.b1": "BREATHE does not collect, store, or transmit any personal information. Everything stays on your device.",
   "privacy.h2": "No Analytics or Third Parties",
   "privacy.b2": "This app contains no analytics scripts, ad trackers, or third-party services of any kind. There is nothing here watching you.",
 

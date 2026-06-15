@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: __APP_URL__/sitemap.xml

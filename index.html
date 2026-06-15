@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="A simple breathing app to help you find calm.">
+
+  <!-- Primary SEO -->
+  <title>BREATHE — Box Breathing for Stress &amp; Anxiety Relief</title>
+  <meta name="description" content="Free guided box breathing app for stress, anxiety &amp; overwhelm. 4-count breathwork sessions. No account, no tracking, works offline. English &amp; Spanish.">
+  <meta name="keywords" content="box breathing, breathing exercise, stress relief, anxiety relief, breathwork, 4-count breathing, guided breathing, calm, mindfulness, PWA">
+  <meta name="author" content="BREATHE">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="__APP_URL__">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BREATHE">
+  <meta property="og:url" content="__APP_URL__">
+  <meta property="og:title" content="BREATHE — Box Breathing for Stress &amp; Anxiety Relief">
+  <meta property="og:description" content="Guided box breathing for stress, anxiety, and overwhelm. No account needed. No tracking. Works offline. English and Spanish.">
+  <meta property="og:image" content="__APP_URL__/assets/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="BREATHE app icon">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BREATHE — Box Breathing for Stress &amp; Anxiety Relief">
+  <meta name="twitter:description" content="Guided box breathing for stress, anxiety &amp; overwhelm. No account. No tracking. Works offline.">
+  <meta name="twitter:image" content="__APP_URL__/assets/icon-512.png">
+  <meta name="twitter:image:alt" content="BREATHE app icon">
 
   <!-- PWA / iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="BREATH">
+  <meta name="apple-mobile-web-app-title" content="BREATHE">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#1C2340">
   <meta name="app-version" content="__APP_VERSION__">
@@ -17,13 +44,32 @@
   <link rel="apple-touch-icon" href="assets/icon-apple.png">
   <link rel="stylesheet" href="style.css">
 
-  <title>BREATH</title>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BREATHE",
+    "url": "__APP_URL__",
+    "description": "Guided box breathing for stress, anxiety, and overwhelm. No account needed. No tracking. Works offline.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": ["en", "es"],
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
 
   <!-- ===== GLOBAL HEADER ===== -->
   <header id="global-header" class="app-header-row">
-    <div class="app-wordmark" data-i18n="header.wordmark">BREATH</div>
+    <div class="app-wordmark" data-i18n="header.wordmark">BREATHE</div>
     <div class="header-right">
       <button class="btn-install-guide btn-lang" id="btn-lang-toggle" data-i18n-aria="header.lang-toggle.aria" aria-label="Switch language">ES</button>
       <button class="btn-install-guide" id="btn-open-install-modal" data-i18n="header.install-btn" data-i18n-aria="header.install-btn.aria" aria-label="How to add to home screen">+ Home Screen</button>
@@ -107,7 +153,7 @@
         <button class="modal-close" id="btn-close-install-modal" data-i18n-aria="modal.close.aria" aria-label="Close">✕</button>
       </div>
 
-      <p class="modal-subtitle" data-i18n="install.modal.subtitle">BREATH works like a native app when installed on your phone. No app store needed.</p>
+      <p class="modal-subtitle" data-i18n="install.modal.subtitle">BREATHE works like a native app when installed on your phone. No app store needed.</p>
 
       <div class="modal-privacy-notice">
         <p data-i18n-html="install.modal.privacy"><strong>Your privacy is fully protected.</strong> Nothing you share is ever saved, recorded, or transmitted.</p>
@@ -145,11 +191,11 @@
         <h2 class="modal-title" id="terms-modal-title" data-i18n="terms.modal.title">Terms of Use</h2>
         <button class="modal-close" id="btn-close-terms-modal" data-i18n-aria="modal.close.aria" aria-label="Close">✕</button>
       </div>
-      <p class="modal-subtitle" data-i18n="terms.modal.subtitle">Please read these terms before using BREATH.</p>
+      <p class="modal-subtitle" data-i18n="terms.modal.subtitle">Please read these terms before using BREATHE.</p>
 
       <div class="legal-section">
         <h3 class="legal-heading" data-i18n="terms.h1">Not a Medical Service</h3>
-        <p class="legal-body" data-i18n-html="terms.b1">BREATH is a personal wellness tool for breathing and stress management. It is <strong>not</strong> a medical service, mental health treatment, or clinical intervention. Nothing in this app constitutes medical advice, diagnosis, or treatment.</p>
+        <p class="legal-body" data-i18n-html="terms.b1">BREATHE is a personal wellness tool for breathing and stress management. It is <strong>not</strong> a medical service, mental health treatment, or clinical intervention. Nothing in this app constitutes medical advice, diagnosis, or treatment.</p>
       </div>
 
       <div class="legal-section">
@@ -174,7 +220,7 @@
         <h2 class="modal-title" id="privacy-modal-title" data-i18n="privacy.modal.title">Privacy Policy</h2>
         <button class="modal-close" id="btn-close-privacy-modal" data-i18n-aria="modal.close.aria" aria-label="Close">✕</button>
       </div>
-      <p class="modal-subtitle" data-i18n="privacy.modal.subtitle">Your privacy is a core principle of BREATH — not an afterthought.</p>
+      <p class="modal-subtitle" data-i18n="privacy.modal.subtitle">Your privacy is a core principle of BREATHE — not an afterthought.</p>
 
       <div class="modal-privacy-notice">
         <p data-i18n-html="privacy.notice"><strong>We collect absolutely nothing.</strong> No account, no login, no tracking.</p>
@@ -182,7 +228,7 @@
 
       <div class="legal-section">
         <h3 class="legal-heading" data-i18n="privacy.h1">No Data Collection</h3>
-        <p class="legal-body" data-i18n="privacy.b1">BREATH does not collect, store, or transmit any personal information. Everything stays on your device.</p>
+        <p class="legal-body" data-i18n="privacy.b1">BREATHE does not collect, store, or transmit any personal information. Everything stays on your device.</p>
       </div>
 
       <div class="legal-section">

@@ -43,6 +43,7 @@
     // Update lang toggle button label
     const btn = document.getElementById('btn-lang-toggle');
     if (btn) btn.textContent = getCurrentLang() === 'es' ? 'EN' : 'ES';
+    document.dispatchEvent(new CustomEvent('breathe:langchange'));
   }
 
   function getCurrentLang() {

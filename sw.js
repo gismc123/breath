@@ -1,4 +1,4 @@
-const CACHE_NAME = 'calm-down-v1.0-__BUILD_DATE__';
+const CACHE_NAME = 'breathe-v1.0-__BUILD_DATE__';
 
 const ASSETS = [
   './',

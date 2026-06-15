@@ -1,5 +1,5 @@
 {
-  "header.wordmark": "BREATH",
+  "header.wordmark": "BREATHE",
   "header.install-btn": "+ Pantalla de inicio",
   "header.install-btn.aria": "Cómo agregar a la pantalla de inicio",
   "header.theme-picker.aria": "Elegir tema de color",
@@ -59,7 +59,7 @@
   "completion.end":    "Por ahora he terminado",
 
   "install.modal.title":         "Agregar a la pantalla de inicio",
-  "install.modal.subtitle":      "BREATH funciona como una app nativa cuando se instala en tu teléfono. No necesitas la tienda de apps.",
+  "install.modal.subtitle":      "BREATHE funciona como una app nativa cuando se instala en tu teléfono. No necesitas la tienda de apps.",
   "install.modal.privacy":       "<strong>Tu privacidad está totalmente protegida.</strong> Nada de lo que compartas se guarda, registra o transmite.",
   "install.modal.iphone.title":  "iPhone / iPad (Safari)",
   "install.modal.iphone.step1":  "Abre esta página en <strong>Safari</strong> (no Chrome)",
@@ -76,19 +76,19 @@
   "modal.ok":         "Entendido",
 
   "terms.modal.title":    "Términos de uso",
-  "terms.modal.subtitle": "Lee estos términos antes de usar BREATH.",
+  "terms.modal.subtitle": "Lee estos términos antes de usar BREATHE.",
   "terms.h1": "No es un servicio médico",
-  "terms.b1": "BREATH es una herramienta de bienestar personal para la respiración y el manejo del estrés. <strong>No</strong> es un servicio médico, tratamiento de salud mental o intervención clínica. Nada en esta app constituye consejo médico, diagnóstico o tratamiento.",
+  "terms.b1": "BREATHE es una herramienta de bienestar personal para la respiración y el manejo del estrés. <strong>No</strong> es un servicio médico, tratamiento de salud mental o intervención clínica. Nada en esta app constituye consejo médico, diagnóstico o tratamiento.",
   "terms.h2": "No sustituye la atención profesional",
   "terms.b2": "Si estás experimentando una crisis de salud mental, comunícate con un profesional calificado o llama/envía un mensaje al <strong>988</strong> (Línea de Crisis). Esta app no reemplaza la terapia, consejería u otra atención profesional.",
   "terms.h3": "Sin garantía",
   "terms.b3": "Esta app se proporciona \"tal cual\" sin garantía de ningún tipo. No garantizamos resultados, disponibilidad ni idoneidad para ningún propósito particular.",
 
   "privacy.modal.title":    "Política de privacidad",
-  "privacy.modal.subtitle": "Tu privacidad es un principio fundamental de BREATH — no una ocurrencia tardía.",
+  "privacy.modal.subtitle": "Tu privacidad es un principio fundamental de BREATHE — no una ocurrencia tardía.",
   "privacy.notice": "<strong>No recopilamos absolutamente nada.</strong> Sin cuenta, sin inicio de sesión, sin rastreo.",
   "privacy.h1": "Sin recopilación de datos",
-  "privacy.b1": "BREATH no recopila, almacena ni transmite ninguna información personal. Todo queda en tu dispositivo.",
+  "privacy.b1": "BREATHE no recopila, almacena ni transmite ninguna información personal. Todo queda en tu dispositivo.",
   "privacy.h2": "Sin analíticas ni terceros",
   "privacy.b2": "Esta app no contiene scripts de analíticas, rastreadores de anuncios ni servicios de terceros de ningún tipo. No hay nada aquí que te observe.",
 
