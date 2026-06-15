@@ -4,7 +4,7 @@ services:
       context: .
       args:
         BUILD_DATE: ${BUILD_DATE:-latest}
-    container_name: calm-down-app
+    container_name: breath-app
     ports:
       - "907:80"
     restart: unless-stopped
