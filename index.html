@@ -21,6 +21,20 @@
 </head>
 <body>
 
+  <!-- ===== GLOBAL HEADER ===== -->
+  <header id="global-header" class="app-header-row">
+    <div class="app-wordmark" data-i18n="header.wordmark">BREATH</div>
+    <div class="header-right">
+      <button class="btn-install-guide btn-lang" id="btn-lang-toggle" data-i18n-aria="header.lang-toggle.aria" aria-label="Switch language">ES</button>
+      <button class="btn-install-guide" id="btn-open-install-modal" data-i18n="header.install-btn" data-i18n-aria="header.install-btn.aria" aria-label="How to add to home screen">+ Home Screen</button>
+      <div class="theme-picker" id="theme-picker" role="group" data-i18n-aria="header.theme-picker.aria" aria-label="Choose color theme">
+        <button class="theme-swatch theme-swatch--midnight" data-theme="midnight" data-i18n-aria="header.theme.midnight.aria" data-i18n-title="header.theme.midnight.title" aria-label="Midnight theme" title="Midnight"></button>
+        <button class="theme-swatch theme-swatch--forest"   data-theme="forest"   data-i18n-aria="header.theme.forest.aria"   data-i18n-title="header.theme.forest.title"   aria-label="Forest theme"   title="Forest"></button>
+        <button class="theme-swatch theme-swatch--ember"    data-theme="ember"    data-i18n-aria="header.theme.ember.aria"    data-i18n-title="header.theme.ember.title"    aria-label="Ember theme"    title="Ember"></button>
+      </div>
+    </div>
+  </header>
+
   <!-- ===== INSTALL BANNER ===== -->
   <div id="install-banner" class="install-banner hidden" role="banner">
     <span class="install-text" data-i18n="install.banner.text">Add this to your home screen for quick access.</span>
@@ -31,18 +45,6 @@
   <!-- ===== SCREEN 1: FEELING CHECK-IN ===== -->
   <div id="screen-checkin" class="screen screen--active" role="main">
     <div class="screen-inner">
-      <div class="app-header-row">
-        <div class="app-wordmark" data-i18n="header.wordmark">BREATH</div>
-        <div class="header-right">
-          <button class="btn-install-guide btn-lang" id="btn-lang-toggle" data-i18n-aria="header.lang-toggle.aria" aria-label="Switch language">ES</button>
-          <button class="btn-install-guide" id="btn-open-install-modal" data-i18n="header.install-btn" data-i18n-aria="header.install-btn.aria" aria-label="How to add to home screen">+ Home Screen</button>
-          <div class="theme-picker" id="theme-picker" role="group" data-i18n-aria="header.theme-picker.aria" aria-label="Choose color theme">
-            <button class="theme-swatch theme-swatch--midnight" data-theme="midnight" data-i18n-aria="header.theme.midnight.aria" data-i18n-title="header.theme.midnight.title" aria-label="Midnight theme" title="Midnight"></button>
-            <button class="theme-swatch theme-swatch--forest"   data-theme="forest"   data-i18n-aria="header.theme.forest.aria"   data-i18n-title="header.theme.forest.title"   aria-label="Forest theme"   title="Forest"></button>
-            <button class="theme-swatch theme-swatch--ember"    data-theme="ember"    data-i18n-aria="header.theme.ember.aria"    data-i18n-title="header.theme.ember.title"    aria-label="Ember theme"    title="Ember"></button>
-          </div>
-        </div>
-      </div>
       <header class="screen-header">
         <h1 data-i18n="checkin.question">How are you feeling right now?</h1>
       </header>

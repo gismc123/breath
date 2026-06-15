@@ -38,6 +38,9 @@
   --color-shadow:        rgba(0, 0, 0, 0.35);
   --color-overlay:       rgba(28, 35, 64, 0.88);
 
+  /* Global header */
+  --global-header-height: 56px;
+
   /* Spacing */
   --spacing-xs: 6px;
   --spacing-sm: 12px;
@@ -179,8 +182,8 @@ input, textarea {
   transform: translateY(16px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   background-color: var(--color-bg-base);
-  /* Safe area for notched phones */
-  padding-top: env(safe-area-inset-top, 0px);
+  /* Clear fixed global header + notch safe area */
+  padding-top: calc(var(--global-header-height) + env(safe-area-inset-top, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
@@ -209,13 +212,26 @@ input, textarea {
 }
 
 /* ============================================================
+   GLOBAL HEADER
+   ============================================================ */
+#global-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--color-bg-base);
+  padding: calc(env(safe-area-inset-top, 0px) + 14px) var(--spacing-md) 14px;
+  margin-bottom: 0;
+}
+
+/* ============================================================
    APP WORDMARK & THEME PICKER
    ============================================================ */
 .app-header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--spacing-lg);
 }
 
 .app-wordmark {

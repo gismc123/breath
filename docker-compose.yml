@@ -1,5 +1,5 @@
 services:
-  calm-down-app:
+  breath-app:
     build:
       context: .
       args:
